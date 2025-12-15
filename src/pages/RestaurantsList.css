@@ -1,0 +1,37 @@
+/* Smooth scrolling for the carousel */
+#restaurantScroll {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(249, 115, 22, 0.5) transparent;
+}
+
+#restaurantScroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+#restaurantScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#restaurantScroll::-webkit-scrollbar-thumb {
+  background-color: rgba(249, 115, 22, 0.5);
+  border-radius: 10px;
+}
+
+#restaurantScroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(249, 115, 22, 0.8);
+}
+
+/* Hide scrollbar visually but keep it functional */
+#restaurantScroll {
+  -ms-overflow-style: none;
+}
+
+/* Smooth scroll snap for better UX */
+#restaurantScroll {
+  scroll-snap-type: x mandatory;
+}
+
+#restaurantScroll > div {
+  scroll-snap-align: start;
+}
